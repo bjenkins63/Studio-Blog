@@ -1,0 +1,31 @@
+{
+  "name": "studio-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjenkins63/Studio-Blog.git"
+  },
+  "author": "Brian Jenkins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bjenkins63/Studio-Blog/issues"
+  },
+  "homepage": "https://github.com/bjenkins63/Studio-Blog#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.0",
+    "tedious": "^11.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

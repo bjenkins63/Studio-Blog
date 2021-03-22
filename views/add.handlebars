@@ -1,0 +1,23 @@
+<section id="add" class="container">
+    <div class="form-wrap">
+      <h1>Add a blog post</h1>
+      {{#each errors}}
+        <div class="error">
+          <p>{{text}}</p>
+        </div>
+      {{/each}}
+      <form action="/blogs/add" method="POST">
+        <div class="input-group">
+          <label for="title">Blog Title here</label>
+          <input type="text" name="title" id="title" class="input-box" placeholder="blog title copy"
+            maxlength="100" value={{title}}>
+        </div>
+        <div class="input-group">
+          <label for="body">Blog here</label>
+          <input type="text" name="blog" id="blog" class="input-box" placeholder="blog copy"
+          maxlength="100" value={{body}}>
+        </div>
+        <input type="submit" value="Add Blog" class="btn btn-reverse">
+      </form>
+    </div>
+  </section>

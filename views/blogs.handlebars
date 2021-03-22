@@ -1,0 +1,17 @@
+<section id="blogs" class="container"></section>
+    <h1>All Blogs</h1>
+    
+    {{#each blogs}}
+
+    <div class="blog">
+
+        <h3>{{title}}</h3>
+        <p>{{body}}</p>
+    </div>
+
+    {{else}}
+    <p>No blogs available</p>
+    {{/each}}
+
+    </section>
+
