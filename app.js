@@ -1,8 +1,6 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
-const bodyParser = require('body-parser');
 const path = require('path');
-const mysql2 = require('mysql2')
 
 const db = require('./config/database')
 
@@ -16,10 +14,7 @@ const app = express();
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-//body parser
-app.use(bodyParser.Options.urlencoded({ extended: false }));
-
-//static folder
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 //index route

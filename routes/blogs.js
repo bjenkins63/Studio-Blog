@@ -6,16 +6,15 @@ const Blog = require('../models/Blog');
 
 //get blogs
 router.get('/', (req, res) =>
-Blog.findAll()
-.then(blogs =>  {
-    res.render('blogs', {
+    Blog.findAll()
+        .then(blogs => res.render('blogs', {
         blogs
-    })
-.catch(err => res.render('error', {error: err}));
+    }))
+.catch(err => res.render('error', {error: err})));
 
 
 //display form
-routerget('add', (req, res) => res.render('add'));
+router.get('add', (req, res) => res.render('add'));
 
 //add blog
 router.post('/add', (req, res) => {
@@ -25,8 +24,6 @@ Blog.create({ title, body })
     .then(blog => res.redirect('/blogs'))
       .catch(err => res.render('error', {error:err.message}))
 });
-})),
-
 
 
 module.exports = router;

@@ -3,10 +3,10 @@ const db = require('../config/database');
 
 const Blog = db.define('blog', {
     title: {
-        type: STRING
+        type: Sequelize.STRING
     },
     body: {
-        type: STRING
+        type: Sequelize.STRING
     }
 })
 
